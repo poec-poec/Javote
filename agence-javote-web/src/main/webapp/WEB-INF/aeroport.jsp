@@ -18,6 +18,16 @@
   <p>${aeroport.nom }</p>
   <p>${aeroport.idAero }</p>
 
+  <c:forEach items="${ aeroport.villes }" var="ville">
+
+    <p>${ ville.nom }</p>
+
+  </c:forEach>
+
+
+
+
+
 </body>
 
 </html>

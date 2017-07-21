@@ -24,6 +24,7 @@ public class AeroportServlet extends HttpServlet
     private static final long serialVersionUID = 1L;
 
     private AeroportDao       aeroportDao      = new AeroportDao();
+    // private VilleDao villeDao = new VilleDao();
 
     /**
      * @see HttpServlet#HttpServlet()
@@ -102,6 +103,7 @@ public class AeroportServlet extends HttpServlet
         // Placer notre client dans la requette
 
         request.setAttribute("aeroport", aeroport);
+        // request.setAttribute("villes", villes);
 
         // Envoyer notre aeroport à notre jsp : aeroport.jsp
 
