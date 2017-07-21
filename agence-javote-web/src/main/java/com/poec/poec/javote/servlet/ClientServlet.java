@@ -10,7 +10,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.poecpoec.agence.dao.AdresseDao;
 import com.poecpoec.agence.dao.ClientDao;
+import com.poecpoec.agence.model.Adresse;
 import com.poecpoec.agence.model.Client;
 
 /**
@@ -22,7 +24,8 @@ public class ClientServlet extends HttpServlet
 {
     private static final long serialVersionUID = 1L;
 
-    ClientDao                 clientDao        = new ClientDao();
+    private ClientDao         clientDao        = new ClientDao();
+    private AdresseDao        adresseDao       = new AdresseDao();
 
     /**
      * @see HttpServlet#HttpServlet()
@@ -90,10 +93,12 @@ public class ClientServlet extends HttpServlet
 
         // Récuperation du client dans la base de donnee en fonction de son Id
         Client client = clientDao.findById(myClientId);
+        Adresse adresse = adresseDao.findByClientId(myClientId);
 
         // Placer notre client dans la requette
 
         request.setAttribute("client", client);
+        request.setAttribute("adresse", adresse);
 
         // Envoyer notre client à notre jsp : client.jsp
 

@@ -12,5 +12,6 @@
 </head>
 <body>
 <p>${client.prenom } </p>
+<p>${adresse.adresse } </p>
 </body>
 </html>
