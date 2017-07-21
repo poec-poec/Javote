@@ -8,10 +8,12 @@
 <html>
 <head>
 <meta charset=UTF-8>
-<title>Insert title here</title>
+<%@include file="/WEB-INF/include/bootstrapCssCdn.jsp" %>
+<title>Profil du client</title>
 </head>
 <body>
 <p>${client.prenom } </p>
 <p>${adresse.adresse } </p>
+<a href="client"><button class="btn btn-defaut">Revenir à la liste des clients</button></a>
 </body>
 </html>
