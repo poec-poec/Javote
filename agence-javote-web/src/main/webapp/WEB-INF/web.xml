@@ -19,4 +19,14 @@
     <servlet-name>ClientServlet</servlet-name>
     <url-pattern>/ClientServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description>Creation du Servlet de l'aeroport</description>
+    <display-name>AeroportServlet</display-name>
+    <servlet-name>AeroportServlet</servlet-name>
+    <servlet-class>com.poec.poec.javote.servlet.AeroportServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AeroportServlet</servlet-name>
+    <url-pattern>/AeroportServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
