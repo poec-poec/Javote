@@ -84,7 +84,35 @@ public class ClientServlet extends HttpServlet
     // méthode qui sert à afficher le profil d'un client sellon son ID
     private void afficherProfil(HttpServletRequest request, HttpServletResponse response)
     {
+        // je lis l'Id mon Client
+        String clientId = request.getParameter("id");
+        int myClientId = Integer.parseInt(clientId);
 
+        // Récuperation du client dans la base de donnee en fonction de son Id
+        Client client = clientDao.findById(myClientId);
+
+        // Placer notre client dans la requette
+
+        request.setAttribute("client", client);
+
+        // Envoyer notre client à notre jsp : client.jsp
+
+        RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/client.jsp");
+
+        try
+        {
+            dispatcher.forward(request, response);
+        }
+        catch (ServletException e)
+        {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        catch (IOException e)
+        {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
     }
 
     /**
