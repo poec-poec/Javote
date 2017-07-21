@@ -19,7 +19,7 @@
 
   <c:forEach items="${ aeroports }" var="aeroport">
 
-    <p>${aeroport.nom}</p>
+    <p><a href="aeroport?id=${ aeroport.idAero }" >${aeroport.nom}</a></p>
   </c:forEach>
 
 </body>
