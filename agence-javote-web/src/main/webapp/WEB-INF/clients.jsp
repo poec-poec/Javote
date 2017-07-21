@@ -14,14 +14,7 @@
 <%@include file="/WEB-INF/include/bootstrapCssCdn.jsp"%>
 <title>Liste de nos clients</title>
 </head>
-<body>
-  <header>
-    <div class="jumbotron">
-      <div class="container">
-        <h1 class="text-center">Agence Javote, le Tour Operator qui vous Carotte !</h1>
-      </div>
-    </div>
-  </header>
+<%@include file="/WEB-INF/include/header.jsp" %>
   <section class="container">
     <h2 class="text-center">Liste des clients</h2>
     <br />
@@ -42,7 +35,7 @@
           >
             <tbody>
               <tr>
-                <td>${ client.nom }${ client.prenom }</td>
+                <td>${ client.nom }   ${ client.prenom }</td>
                 <td><a href="client?id=${client.id}">Voir le profil</a></td>
               </tr>
             </tbody>
@@ -51,11 +44,6 @@
         </table>
       </div>
     </div>
-
-
-
-
-
   </section>
 </body>
 </html>
